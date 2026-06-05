@@ -1,17 +1,17 @@
-# Contribution [#]: [Issue Title]
+# Contribution 1: The delete remove button on the list of owners should not be active when there is only one owner
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** Alicia Danielle  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** 1
+**Student:** Alicia Danielle
+**Issue:** [GitHub issue link](https://github.com/rubygems/rubygems.org/issues/5666)
+**Status:** Phase I / In Progress
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose this issue because it is a confirmed bug with a clear and well-defined expected behavior. The "Remove" button should simply not appear when there is only one owner of a gem. Being labeled as a "good first issue," it felt like a manageable starting point for my first open-source contribution without being overwhelming.
 
----
+I hope to learn what it feels like to contribute to a real-world open-source project, from setting up an unfamiliar codebase locally, to understanding how to track down the right file to fix, to submitting a pull request that gets reviewed by actual maintainers. This is my first time doing this kind of project and I'm excited to go through the full process end to end.
 
 ## Understanding the Issue
 
