@@ -81,9 +81,13 @@ Using UMPIRE framework (adapted):
 ```
 2. Add the icon inside the send button:
 ```tsx
-   
-     
-   
+   <button
+  onClick={sendMessage}
+  disabled={loading}
+  className="h-14 w-14 rounded-full bg-blue-600 text-white shadow-md flex items-center justify-center transition-all duration-300 hover:scale-110">
+  <SendHorizontal size={22} />
+</button>
+  
 ```
 
 **Implement:** [Link to your branch/commits as you work]
