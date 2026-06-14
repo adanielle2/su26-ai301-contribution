@@ -90,13 +90,13 @@ Using UMPIRE framework (adapted):
   
 ```
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [[Link to branch](https://github.com/adanielle2/travellers/tree/fix/enter-icon-not-visible)]
 
 **Review:**
-- [ ] Follows the project's existing icon pattern using `lucide-react`
-- [ ] No new dependencies added
-- [ ] Button functionality unchanged — only a visual fix
-- [ ] Ran `npm run lint` with no errors
+- [x] Follows the project's existing icon pattern using `lucide-react`
+- [x] No new dependencies added
+- [x] Button functionality unchanged; only a visual fix
+- [x] Ran `npm run lint` with no errors
 
 **Evaluate:** Verify the fix by opening `http://localhost:3000`, clicking the chat icon, and confirming the send button now displays a visible arrow/send icon inside the blue circle.
 
