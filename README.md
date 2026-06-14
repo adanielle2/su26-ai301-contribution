@@ -1,4 +1,4 @@
-# Contribution 1: The delete remove button on the list of owners should not be active when there is only one owner
+# Contribution 1: Enter icon is not visible
 
 **Contribution Number:** 1
 **Student:** Alicia Danielle
