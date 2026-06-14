@@ -17,19 +17,19 @@ I hope to learn what it feels like to contribute to a real-world open-source pro
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+The send button in the TravelBox chatbot component is rendered as a plain blue circle with no icon inside it. There is no visual indicator to show users that the button submits their message, making it confusing and unclear.
 
 ### Expected Behavior
 
-[What should happen?]
+The send button should display a visible enter/send icon so users can clearly identify it as the button to submit their chat query.
 
 ### Current Behavior
 
-[What actually happens?]
+The send button appears as a plain blue circle with no icon, giving no visual cue to the user that it is a submit button.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+- `src/components/Chatbot.tsx` — the send button inside the chat input section is missing an icon
 
 ---
 
@@ -37,19 +37,22 @@ I hope to learn what it feels like to contribute to a real-world open-source pro
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+- Cloned the forked repository locally
+- Ran `npm install` to install dependencies (received deprecation warnings but no errors)
+- Created a `.env` file with `NEXTAUTH_SECRET` and `NEXTAUTH_URL`
+- Ran `npm run dev` and opened `http://localhost:3000` in the browser
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Go to `http://localhost:3000`
+2. Look at the bottom right of the page — a chat widget is visible
+3. Click the chat bubble icon to open the TravelBox chat panel
+4. Observe the send button on the right side of the input field, it appears as a plain blue circle with no icon
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
+- **Screenshots/logs:** The send button renders as a solid blue circle with no icon inside it
+- **My findings:** Inside `src/components/Chatbot.tsx`, the send button element has no children, the icon was never added to the button
 
 ---
 
@@ -57,30 +60,42 @@ I hope to learn what it feels like to contribute to a real-world open-source pro
 
 ### Analysis
 
-[Your analysis of the root cause - what's causing the issue?]
+The root cause is in `src/components/Chatbot.tsx`. The send button is fully styled but has no icon inside it. The project already uses the `lucide-react` icon library (the `MessageCircle` icon is imported at the top of the file), so the fix simply requires importing and adding the appropriate send icon.
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+Import the `SendHorizontal` icon from `lucide-react` and place it inside the send button element.
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** The send button in the chatbot component is an empty styled button; it needs a visible icon added inside it.
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** The codebase already uses `lucide-react` for icons: the `MessageCircle` icon is imported at the top of `Chatbot.tsx`. The same pattern can be used to add a send icon.
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:**
+1. In `src/components/Chatbot.tsx`, update the import to add `SendHorizontal`:
+```tsx
+   import { MessageCircle, SendHorizontal } from "lucide-react";
+```
+2. Add the icon inside the send button:
+```tsx
+   
+     
+   
+```
 
 **Implement:** [Link to your branch/commits as you work]
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:**
+- [ ] Follows the project's existing icon pattern using `lucide-react`
+- [ ] No new dependencies added
+- [ ] Button functionality unchanged — only a visual fix
+- [ ] Ran `npm run lint` with no errors
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** Verify the fix by opening `http://localhost:3000`, clicking the chat icon, and confirming the send button now displays a visible arrow/send icon inside the blue circle.
+
 
 ---
 
