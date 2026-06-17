@@ -122,6 +122,9 @@ Using UMPIRE framework (adapted):
 - Confirmed clicking the button still sends the message correctly
 - Tested in both light and dark mode; icon is visible in both
 
+<img width="336" height="433" alt="Screenshot 2026-06-17 at 16 14 50" src="https://github.com/user-attachments/assets/ccb2762d-6af1-41bb-9a9d-08bb2a26d31b" /> <img width="332" height="426" alt="Screenshot 2026-06-17 at 16 16 07" src="https://github.com/user-attachments/assets/03c42b98-34d3-4c17-ba63-50e4c9f38693" />
+
+
 ---
 
 ## Implementation Notes
