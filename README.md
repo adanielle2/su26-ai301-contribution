@@ -106,37 +106,46 @@ Using UMPIRE framework (adapted):
 ## Testing Strategy
 
 ### Unit Tests
-
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+- N/A; This fix is a purely visual change (adding an icon to a button).
+  No logic, functions, or data processing were added or modified,
+  so unit tests are not applicable.
 
 ### Integration Tests
-
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+- N/A; The button's onClick handler and sendMessage functionality
+  were unchanged. No integration testing required.
 
 ### Manual Testing
-
-[What you tested manually and results]
+- Ran `npm run dev` and opened `http://localhost:3000`
+- Clicked the chat bubble icon in the bottom right corner to open TravelBox
+- Confirmed the send button now displays the `SendHorizontal` arrow icon
+  inside the blue circle
+- Confirmed clicking the button still sends the message correctly
+- Tested in both light and dark mode; icon is visible in both
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 1 Progress
+Set up the local development environment by forking and cloning the repository,
+running `npm install`, creating the `.env` file, and running `npm run dev`.
+Reproduced the bug by navigating to the homepage and opening the chat widget,
+where the send button appeared as a plain blue circle with no icon.
+Located the bug in `src/components/Chatbot.tsx`; the send button had no
+children/icon inside it.
 
-[What you built this week, challenges faced, decisions made]
-
-### Week [Y] Progress
-
-[Continue documenting as you work]
+### Week 2 Progress
+Implemented the fix by importing `SendHorizontal` from `lucide-react` and
+adding it inside the send button. Committed and published the branch,
+then opened a Pull Request to the original repository.
 
 ### Code Changes
-
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** `src/components/Chatbot.tsx`
+- **Key commits:** [[Link to commit on GitHub](https://github.com/singh-odyssey/travellers/compare/main...adanielle2:travellers:fix/enter-icon-not-visible)]
+- **Approach decisions:** Used `SendHorizontal` from `lucide-react` since
+  the project already uses this library for icons (e.g. `MessageCircle`),
+  keeping the fix consistent with the existing codebase pattern and
+  requiring no new dependencies.
 
 ---
 
