@@ -3,7 +3,7 @@
 **Contribution Number:** 1
 **Student:** Alicia Danielle
 **Issue:** [GitHub issue link](https://github.com/singh-odyssey/travellers/issues/158)
-**Status:** Phase IV / In Progress
+**Status:** Phase IV / Complete
 
 ---
 
@@ -154,15 +154,14 @@ then opened a Pull Request to the original repository.
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** https://github.com/singh-odyssey/travellers/pull/161 
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** fix: add missing SendHorizontal icon to chat send button
 
 **Maintainer Feedback:**
-- [Date]: [Summary of feedback received]
-- [Date]: [How you addressed it]
+- Jun 18, 2026: No review comments; PR was merged directly by maintainer (singh-odyssey) after CI passed.
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** Merged
 
 ---
 
@@ -170,20 +169,22 @@ then opened a Pull Request to the original repository.
 
 ### Technical Skills Gained
 
-[What you learned technically]
+Learned how to import and use a specific icon (SendHorizontal) from the lucide-react library inside a React component.
+Practiced working within an existing component (TravelBox / chatbot.tsx) without breaking surrounding logic.
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+The send button was rendering as a plain blue circle with no visible icon, giving users no indication the button was interactive
+To locate the relevant code, I used the editor's search bar to find keywords that pointed me to the button component, which helped me navigate an unfamiliar codebase efficiently
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+Check the icon library docs earlier instead of guessing the import name
 
 ---
 
 ## Resources Used
 
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
+- lucide-react icon explorer: for finding and verifying SendHorizontal
+- lucide-react on GitHub: import/install reference
+- Issue #158 — original bug report
